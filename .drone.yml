@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: node:8
+    image: node:alpine
       commands:
         - cd backend/src
         - npm install
