@@ -1,7 +1,7 @@
 pipeline:
   build:
-    image: node:8
-      commands:
-        - cd backend/src
-        - npm install
-        - npm test
+    image: node:10
+    commands:
+      - cd backend/src
+      - npm install
+      - npm test
