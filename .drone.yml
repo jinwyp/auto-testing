@@ -4,7 +4,7 @@ pipeline:
     commands:
       - cd backend/src
       - npm install
-      - npm test
+      - npm run build
   rsync:
       image: drillster/drone-rsync
       user: jinwyp
