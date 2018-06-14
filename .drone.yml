@@ -10,7 +10,6 @@ pipeline:
   rsync:
     image: drillster/drone-rsync
     user: root
-    key: ${RSYNC_KEY}
     hosts:
       - 35.201.251.211
     source: .
