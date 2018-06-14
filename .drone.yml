@@ -13,7 +13,7 @@ pipeline:
     key: ${rsync_key}
     hosts:
       - 35.201.251.211
-    source: ./backend/src
+    source: .
     target: /home/jinwyp/github
     script:
       - pwd
