@@ -5,3 +5,11 @@ pipeline:
       - cd backend/src
       - npm install
       - npm test
+  rsync:
+      image: drillster/drone-rsync
+      user: jinwyp
+      hosts:
+        - 35.201.251.211
+      source: ./src
+      target: ~/github
+      secrets: [ rsync_key ]
