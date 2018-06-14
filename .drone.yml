@@ -10,6 +10,6 @@ pipeline:
       user: jinwyp
       hosts:
         - 35.201.251.211
-      source: ./src
+      source: ./backend/src
       target: ~/github
       secrets: [ rsync_key ]
