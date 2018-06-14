@@ -10,12 +10,12 @@ pipeline:
       - npm run build
       - pwd
   rsync:
-      image: drillster/drone-rsync
-      user: root
-      key: @/root/.ssh/id_rsa
-      hosts:
-        - 35.201.251.211
-      source: ./dist/backend/src
-      target: ~/github
-      script:
-        - pwd
+    image: drillster/drone-rsync
+    user: root
+    hosts:
+      - 35.201.251.211
+    source: ./dist/backend/src
+    target: /home/jinwyp/github
+    script:
+      - pwd
+    secrets: [ rsync_key ]
