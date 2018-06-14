@@ -10,11 +10,12 @@ pipeline:
   rsync:
     image: drillster/drone-rsync
     user: root
-    key: ${rsync_key}
+    key: ${RSYNC_KEY}
     hosts:
       - 35.201.251.211
     source: .
     target: /home/jinwyp/github
     script:
       - pwd
-    secrets: [ rsync_key ]
+      - echo key ${RSYNC_KEY}
+    secrets: [ RSYNC_KEY ]
